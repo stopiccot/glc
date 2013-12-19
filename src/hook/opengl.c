@@ -347,6 +347,10 @@ void __opengl_glXSwapBuffers(Display *dpy, GLXDrawable drawable)
 {
 	INIT_GLC
 
+	/* we need to start capture when first frame is rendered, not when opengl is initialized
+	   so -s is not applicable in our case */
+	start_capture();
+
 	/* both flags shouldn't be defined */
 	if (opengl.read_buffer == GL_FRONT)
 		opengl.glXSwapBuffers(dpy, drawable);
