@@ -85,7 +85,7 @@ int opengl_init(glc_t *glc)
 	gl_capture_set_fps(opengl.gl_capture, opengl.fps);
 
 	if (getenv("GLC_CAPTURE_ALL_FRAMES")) {
-		if (atoi(getenv("GLC_CAPTURE_ALL_FRAMES"))) == 1) 
+		if (atoi(getenv("GLC_CAPTURE_ALL_FRAMES")) == 1) 
 			opengl.gl_capture = 0;
 	}
 
