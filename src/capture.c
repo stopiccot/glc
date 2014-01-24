@@ -69,6 +69,7 @@ int main(int argc, char *argv[])
 		{ 0 , "compressed",		"GLC_COMPRESSED_BUFFER_SIZE",	NULL},
 		{ 0 , "uncompressed",		"GLC_UNCOMPRESSED_BUFFER_SIZE",	NULL},
 		{ 0 , "unscaled",		"GLC_UNSCALED_BUFFER_SIZE",	NULL},
+		{ 0 , "all-frames",		"GLC_CAPTURE_ALL_FRAMES",	 "0"},
 		{ 0 , NULL,			NULL,				NULL}
 	};
 

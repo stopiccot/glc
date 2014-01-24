@@ -84,6 +84,11 @@ int opengl_init(glc_t *glc)
 	glc_util_info_fps(opengl.glc, opengl.fps);
 	gl_capture_set_fps(opengl.gl_capture, opengl.fps);
 
+	if (getenv("GLC_CAPTURE_ALL_FRAMES")) {
+		if (atoi(getenv("GLC_CAPTURE_ALL_FRAMES"))) == 1) 
+			opengl.gl_capture = 0;
+	}
+
 	if (getenv("GLC_COLORSPACE")) {
 		if (!strcmp(getenv("GLC_COLORSPACE"), "420jpeg"))
 			opengl.convert_ycbcr_420jpeg = 1;
